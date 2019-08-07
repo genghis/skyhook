@@ -1,5 +1,6 @@
 import requests
 import os
+import webbrowser
 
 os.system('clear')
 slackdomain = input('Please put in your slack domain (i.e.: gpff) ')
@@ -9,7 +10,7 @@ if tokeneneed == 'y':
 	os.system('clear')
 	print(f'Great. Copy this command to clipboard:\n\n\nwindow.prompt("your api token is: ",/api_token: "(.*)"/.exec(document.body.innerHTML)[1])')
 	ready = input('\n\n*Press enter to continue* -- you will need to open devtools on the page that opens and paste that command into the console')
-	os.system(f'open -a "Google Chrome" {tokenaddress}')
+	webbrowser.open_new_tab(tokenaddress)
 else:
 	pass
 slackaddress = f'https://{slackdomain}.slack.com/api/emoji.add' #replace with the actual address for your slack instance
