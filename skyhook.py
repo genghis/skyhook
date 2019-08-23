@@ -8,7 +8,7 @@ tokenaddress = f"https://{slackdomain}.slack.com/customize/emoji"
 tokeneneed = input('\nDo you need help getting your Slack Token (y/n)? ')
 if tokeneneed == 'y':
 	os.system('clear')
-	print(f'Great. Copy this command to clipboard:\n\n\nwindow.prompt("your api token is: ",/api_token: "(.*)"/.exec(document.body.innerHTML)[1])')
+	print(f'Great. Copy this command to clipboard:\n\n\nwindow.prompt("your api token is: ", TS.boot_data.api_token)')
 	ready = input('\n\n*Press enter to continue* -- you will need to open devtools on the page that opens and paste that command into the console')
 	webbrowser.open_new_tab(tokenaddress)
 else:
