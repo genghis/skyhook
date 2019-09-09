@@ -3,3 +3,8 @@ emojis/
 include/
 lib/
 pyenv.cfg
+build/*
+dist/
+__pycache__
+pyenv.cfg
+skyhook.spec
